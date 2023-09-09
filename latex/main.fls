@@ -226,6 +226,59 @@ INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfo
 OUTPUT main.toc
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti10.tfm
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT ..\images\proc\basis_0-1.jpg
+INPUT ..\images\proc\basis_0-1.jpg
+INPUT ..\images\proc\basis_0-1.jpg
+INPUT ..\images\proc\basis_0-1.jpg
+INPUT ..\images\proc\basis_0-1.jpg
+INPUT ..\images\proc\basis_0-1.jpg
+INPUT ..\images\proc\basis_0-1.jpg
+INPUT ..\images\proc\basis_0-2.jpg
+INPUT ..\images\proc\basis_0-2.jpg
+INPUT ..\images\proc\basis_0-2.jpg
+INPUT ..\images\proc\basis_0-2.jpg
+INPUT ..\images\proc\basis_0-2.jpg
+INPUT ..\images\proc\basis_0-2.jpg
+INPUT ..\images\proc\basis_0-2.jpg
+INPUT ..\images\proc\basis_1-1.jpg
+INPUT ..\images\proc\basis_1-1.jpg
+INPUT ..\images\proc\basis_1-1.jpg
+INPUT ..\images\proc\basis_1-1.jpg
+INPUT ..\images\proc\basis_1-1.jpg
+INPUT ..\images\proc\basis_1-1.jpg
+INPUT ..\images\proc\basis_1-1.jpg
+INPUT ..\images\proc\basis_1-2.jpg
+INPUT ..\images\proc\basis_1-2.jpg
+INPUT ..\images\proc\basis_1-2.jpg
+INPUT ..\images\proc\basis_1-2.jpg
+INPUT ..\images\proc\basis_1-2.jpg
+INPUT ..\images\proc\basis_1-2.jpg
+INPUT ..\images\proc\basis_1-2.jpg
+INPUT ..\images\proc\basis_0-3.jpg
+INPUT ..\images\proc\basis_0-3.jpg
+INPUT ..\images\proc\basis_0-3.jpg
+INPUT ..\images\proc\basis_0-3.jpg
+INPUT ..\images\proc\basis_0-3.jpg
+INPUT ..\images\proc\basis_0-3.jpg
+INPUT ..\images\proc\basis_0-3.jpg
+INPUT ..\images\proc\basis_7-10.jpg
+INPUT ..\images\proc\basis_7-10.jpg
+INPUT ..\images\proc\basis_7-10.jpg
+INPUT ..\images\proc\basis_7-10.jpg
+INPUT ..\images\proc\basis_7-10.jpg
+INPUT ..\images\proc\basis_7-10.jpg
+INPUT ..\images\proc\basis_7-10.jpg
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
@@ -240,6 +293,8 @@ INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\ams
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Users\Marko Urbanc\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb

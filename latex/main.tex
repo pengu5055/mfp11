@@ -194,7 +194,79 @@ ampak se mi je zdelo dovolj preprosto, da sem kar sam napisal funkcije za rešev
 Glede na to, kako se mi, zaradi lastnih napak, mudi z oddajo se mi zdi najbolj smiselno, da gremo kar takoj na rezultate.
 
 \subsection{Bazne funkcije}
-Najprej si poglejmo kako izgledajo bazne funkcije. 
+Najprej si poglejmo kako izgledajo bazne funkcije. Kar se tiče $\xi$ in $\phi$ mreže sem uporabil v obeh primerih
+$1000$ točk v vsaki smeri. V $\xi$ smeri sem vzel interval $[0,\>1]$ v $\phi$ smeri pa $[0,\>\pi]$. Spodaj je prikazanih nekaj 
+baznih funkcij za različne $m$ in $n$. Opazimo, da večanje $m$ povečuje število nekih tokovih kanalov porazdeljenih po 
+$\phi$ smeri. Večanje $n$ pa centrirano funkcijo potiska vedno bolj proti spodnjemu ravnemu robu cevi. Definitely sem
+narisal te grafe na IBM PC/XT 5160.. yes.
+
+% Subplot of two figures
+\begin{figure}[H]
+    \centering
+    \makebox[\textwidth][c]{%
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/basis_0-1.jpg}
+        \caption{$\psi_{01}$}
+        \label{fig:psi_0_1}
+    \end{minipage}%
+    %\hspace{0.001\textwidth}% 
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/basis_0-2.jpg}
+        \caption{$\psi_{02}$}
+        \label{fig:psi_0_2}
+    \end{minipage}%
+    }
+    \caption{Bazne funkcije za $m=0$ in $n=1$ ter $n=2$.}
+    \label{fig:psi_0}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \makebox[\textwidth][c]{%
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/basis_1-1.jpg}
+        \caption{$\psi_{11}$}
+        \label{fig:psi_1_1}
+    \end{minipage}%
+    %\hspace{0.001\textwidth}% 
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/basis_1-2.jpg}
+        \caption{$\psi_{12}$}
+        \label{fig:psi_1_2}
+    \end{minipage}%
+    }
+    \caption{Bazne funkcije za $m=1$ in $n=1$ ter $n=2$.}
+    \label{fig:psi_1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \makebox[\textwidth][c]{%
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/basis_0-3.jpg}
+        \caption{$\psi_{01}$}
+        \label{fig:psi_0_3}
+    \end{minipage}%
+    %\hspace{0.001\textwidth}% 
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/basis_7-10.jpg}
+        \caption{$\psi_{02}$}
+        \label{fig:psi_7_10}
+    \end{minipage}%
+    }
+    \caption{Bazne funkcije za $m=0$, $n=3$ in $m=7$ ter $n=10$.}
+    \label{fig:psi_2}
+\end{figure}
+\newpage
+\subsection{Koeficient $C$ in pretok}
+Sedaj si poglejmo kako je odvisen koeficient $C$ od števila členov v indeksih $m$ in $n$. Kar se tiče $\xi$ in $\phi$ mreže
+sem uporabil takšno kot prej. Za izračun koeficienta $C$ sem uporabil enačbo (\ref{eq:C}). 
+
+
 
 
 \section{Komentarji in izboljšave}
