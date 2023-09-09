@@ -48,7 +48,7 @@ class GalerkinObject():
         Bessel functions.
         """
         values = x**(2*m+1) * (1-x)**n * np.sin((2*m+1)*phi)
-        return values / np.max(values)
+        return values
     
     def delta_function(self, m, m_prime):
         """
@@ -162,7 +162,7 @@ class GalerkinObject():
         
         return self.Z
     
-    def plot_flow(self, Z: np.ndarray | None, m: int = None, n: int = None, title: str = None):
+    def plot_flow(self, Z: np.ndarray | None, m: int = None, n: int = None, title: str = None, save: bool = False, filename: str = None):
         fig, ax = plt.subplots(subplot_kw=dict(projection='polar'), facecolor="#000000")
         ax.set_xticklabels([])
         ax.set_yticklabels([])
@@ -207,9 +207,10 @@ class GalerkinObject():
         ax.spines['start'].set_alpha(0.8)
         ax.spines['start'].set_linestyle("--")
 
-        plt.title(f"{title} $m={m}$, $n={n}$", color="#5EE032")
+        plt.title(f"{title}", color="#5EE032")
         plt.grid(False)
-        plt.savefig('filename.png', dpi=1200, bbox_inches="tight")
+        if save:
+            plt.savefig(filename, dpi=300, bbox_inches="tight")
         plt.show()
 
 
@@ -231,12 +232,8 @@ def scale_it(N_range, M_range):
     return solutions
 
 # print(scale_it(5, 5))
-
-m = 0
-n = 1
 GO = GalerkinObject(3, 3)
 val = GO.solve()
-print(val)
 Z = GO.solve_flow()
-GO.plot_flow(Z, m, n, f"Flow Field $C = {round(val, 3)}$")
+GO.plot_flow(Z, title=f"Flow Field $C = {round(val, 3)}$ M={GO.M_dim}, N={GO.N_dim}")
 
