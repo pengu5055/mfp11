@@ -5,5 +5,5 @@
 \contentsline {section}{\numberline {4}Rezultati}{4}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Bazne funkcije}{4}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Koeficient $C$ in pretok}{6}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Komentarji in izboljšave}{6}{section.5}%
-\contentsline {section}{Literatura}{7}{section*.5}%
+\contentsline {section}{\numberline {5}Komentarji in izboljšave}{7}{section.5}%
+\contentsline {section}{Literatura}{8}{section*.7}%

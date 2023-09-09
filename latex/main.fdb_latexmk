@@ -1,19 +1,23 @@
 # Fdb version 4
-["bibtex main"] 1694289839 "main.aux" "main.bbl" "main" 1694289841 0
+["bibtex main"] 1694292807 "main.aux" "main.bbl" "main" 1694293112 0
   "./sources.bib" 1693580566 585 59db498271dfb5e1811a288748c6fc20 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/unsrt.bst" 1291868336 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1694289841 3937 0b9e0928faed62df3c2b79bc44be16e7 "pdflatex"
+  "main.aux" 1694293111 4299 c7a255f9bde7a9277848f3bc89e6c34c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1694289839 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN11/latex/main.tex" "main.pdf" "main" 1694289841 0
+["pdflatex"] 1694293109 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN11/latex/main.tex" "main.pdf" "main" 1694293112 0
   "../images/proc/basis_0-1.jpg" 1694287450 64685 d10a6e2d88539acfdf042a07d4bd6b9c ""
   "../images/proc/basis_0-2.jpg" 1694287461 64290 fcd5662f0b525d8fab5c4f633183494d ""
   "../images/proc/basis_0-3.jpg" 1694287474 64217 f26a572d39d2c42bd264a83041edc083 ""
   "../images/proc/basis_1-1.jpg" 1694287492 67008 6a7f17dedc5313e6c8d59d6173ad3b20 ""
   "../images/proc/basis_1-2.jpg" 1694287502 66768 8276d0615f3b4a08801c36015bb19428 ""
   "../images/proc/basis_7-10.jpg" 1694287528 67438 1936eb40f68d47d83c47c809c400dcd1 ""
+  "../images/proc/m_scaling.jpg" 1694292383 85580 b33fb8a32a6f5dce8617b0dbe0279c02 ""
+  "../images/proc/m_scaling_time.jpg" 1694292391 85777 a0e9983fda2316f4678e3e63b89b9ffa ""
+  "../images/proc/n_scaling.jpg" 1694293100 88013 22aa388e8c03b5389b11b6a8d893a7b9 ""
+  "../images/proc/n_scaling_time.jpg" 1694293109 85774 bd377e1f702b05a484977aac3b157863 ""
   "C:/Users/Marko Urbanc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1694209903 81068 299f700eb05b1217173e62b88b513bd0 ""
   "C:/Users/Marko Urbanc/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1691572099 24122251 e939fd6a89cc5679b97085233755a785 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233955448 1004 54797486969f23fa377b128694d548df ""
@@ -135,13 +139,13 @@
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1673965817 123 a302f2c651a95033260db60e51527ae8 ""
-  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN11/latex/main.tex" 1694289836 10285 d7e9937fcbc0bbd35d8c7e857c3f74b8 ""
+  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN11/latex/main.tex" 1694293100 11878 db6bbb0242dffec5c6916f6b31bcfde0 ""
   "logo.png" 1693580566 8303 8f7f5965ff153bbc45aecaef5ccdb0ac ""
-  "main.aux" 1694289841 3937 0b9e0928faed62df3c2b79bc44be16e7 "pdflatex"
-  "main.bbl" 1694289839 52 0eba253fc001332e731e8aba3f23127b "bibtex main"
-  "main.out" 1694289841 915 0ce9baffedefda05f2c656c281b8bc3e "pdflatex"
-  "main.tex" 1694289836 10285 d7e9937fcbc0bbd35d8c7e857c3f74b8 ""
-  "main.toc" 1694289841 591 b0c8e9a01cebf193f7a5e3f14ea125a7 "pdflatex"
+  "main.aux" 1694293111 4299 c7a255f9bde7a9277848f3bc89e6c34c "pdflatex"
+  "main.bbl" 1694292808 52 0eba253fc001332e731e8aba3f23127b "bibtex main"
+  "main.out" 1694293111 915 85b0668f55c3b88d6fd9efa380bba299 "pdflatex"
+  "main.tex" 1694293100 11878 db6bbb0242dffec5c6916f6b31bcfde0 ""
+  "main.toc" 1694293111 591 4a961d85f149dca26d588e130562b146 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

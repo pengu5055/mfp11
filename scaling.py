@@ -46,11 +46,11 @@ points.clear()
 
 # Plotting
 fig, ax = plt.subplots(facecolor='#000000')
-plt.plot(n_range, np.asarray(result_1), label="n=1", c=color[3], lw=3)
-plt.plot(n_range, np.asarray(result_2), label="n=2", c=color[4], ls= "--", lw=3)
-plt.plot(n_range, np.asarray(result_3), label="n=3", c=color[5], ls = ":", lw=3)
-plt.plot(n_range, np.asarray(result_4), label="n=4", c=color[6], ls = "-.", lw=3)
-plt.plot(n_range, np.asarray(result_5), label="n=5", c=color[7], ls = (0, (3, 1, 1, 1, 1, 1)), lw=3)
+plt.plot(n_range, np.asarray(result_1), label="m=1", c=color[3], lw=3)
+plt.plot(n_range, np.asarray(result_2), label="m=2", c=color[4], ls= "--", lw=3)
+plt.plot(n_range, np.asarray(result_3), label="m=3", c=color[5], ls = ":", lw=3)
+plt.plot(n_range, np.asarray(result_4), label="m=4", c=color[6], ls = "-.", lw=3)
+plt.plot(n_range, np.asarray(result_5), label="m=5", c=color[7], ls = (0, (3, 1, 1, 1, 1, 1)), lw=3)
 
 ax.axhline(y=comp, color=color[-1], linestyle=':', label="$\psi_{1010} result$")
 ax.xaxis.label.set_color("#5EE032")
@@ -64,7 +64,7 @@ for spine in ax.spines.keys():
 
 ax.grid(c="#5EE032", alpha=0.2)
 plt.xlabel("n")
-plt.ylabel("t [s]")
+plt.ylabel("Result")
 plt.legend(facecolor='#000000', edgecolor="#97FC1A", labelcolor='#5EE032')
 plt.title("Scaling of the result with respect to n", color="#5EE032")
 plt.show()

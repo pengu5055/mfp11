@@ -247,14 +247,14 @@ narisal te grafe na IBM PC/XT 5160.. yes.
     \begin{minipage}{0.90\textwidth}
         \centering
         \includegraphics[width=\linewidth]{../images/proc/basis_0-3.jpg}
-        \caption{$\psi_{01}$}
+        \caption{$\psi_{03}$}
         \label{fig:psi_0_3}
     \end{minipage}%
     %\hspace{0.001\textwidth}% 
     \begin{minipage}{0.90\textwidth}
         \centering
         \includegraphics[width=\linewidth]{../images/proc/basis_7-10.jpg}
-        \caption{$\psi_{02}$}
+        \caption{$\psi_{710}$}
         \label{fig:psi_7_10}
     \end{minipage}%
     }
@@ -265,8 +265,43 @@ narisal te grafe na IBM PC/XT 5160.. yes.
 \subsection{Koeficient $C$ in pretok}
 Sedaj si poglejmo kako je odvisen koeficient $C$ od števila členov v indeksih $m$ in $n$. Kar se tiče $\xi$ in $\phi$ mreže
 sem uporabil takšno kot prej. Za izračun koeficienta $C$ sem uporabil enačbo (\ref{eq:C}). 
+\begin{figure}[H]
+    \centering
+    \makebox[\textwidth][c]{%
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/m_scaling.jpg}
+    \end{minipage}%
+    %\hspace{0.001\textwidth}% 
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/m_scaling_time.jpg}
+    \end{minipage}%
+    }
+    \caption{Skaliranje koeficienta $C$ in časa računanja z $m$.}
+\end{figure}
 
+Očitno neka srednja vrednost $m$ zelo pripomore k izboljšavi rezultata. Na grafu je narisan primer za $\psi_{1010}$ kot primerjalna vrednost
+za $C$. Čas računanja je očitno linearno odvisen od $m$, $n$ pa določa strmino premice. Vrednosti se asimptotsko približujejo neki vrednosti
+z večanjem $m$. Sklepam, da je to najbrž prava vrednost $C$.
 
+\begin{figure}[H]
+    \centering
+    \makebox[\textwidth][c]{%
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/n_scaling.jpg}
+    \end{minipage}%
+    %\hspace{0.001\textwidth}% 
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/n_scaling_time.jpg}
+    \end{minipage}%
+    }
+    \caption{Skaliranje koeficienta $C$ in časa računanja z $n$.}
+\end{figure}
+
+Zanimivo je, da $n$ precej drastično vpliva 
 
 
 \section{Komentarji in izboljšave}

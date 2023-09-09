@@ -323,4 +323,4 @@ GO = GalerkinObject(10, 10)
 # Z = GO.solve_flow()
 # GO.plot_flow(Z, title=f"Flow Field $C = {round(val, 5)}$ M={GO.M_dim}, N={GO.N_dim}")
 
-print(scale_it(15, 15))
+print(scale_it(, 15))
