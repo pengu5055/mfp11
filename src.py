@@ -177,7 +177,7 @@ class GalerkinObject():
 
         # Spines for cb are called ['left', 'right', 'bottom', 'top', 'outline']
         # Got by calling cb.ax.spines.keys() and iterating over them
-        cb.set_label(r"Flow Rate", color="#5EE032")
+        cb.set_label(r"Flow Rate", color="#5EE032", labelpad=10, size=12)
         cb.ax.xaxis.set_tick_params(color="#5EE032")
         cb.ax.yaxis.set_tick_params(color="#5EE032")
         cb.ax.tick_params(axis="x", colors="#5EE032")
@@ -207,8 +207,9 @@ class GalerkinObject():
         ax.spines['start'].set_alpha(0.8)
         ax.spines['start'].set_linestyle("--")
 
-        plt.title(f"{title}", color="#5EE032")
+        plt.title(f"{title}", color="#5EE032", size=14)
         plt.grid(False)
+        plt.subplots_adjust(right=0.86)
         if save:
             plt.savefig(filename, dpi=300, bbox_inches="tight")
         plt.show()
