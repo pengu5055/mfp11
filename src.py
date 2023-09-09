@@ -76,6 +76,19 @@ class GalerkinObject():
                                                                                     beta(n+n_prime-1, 3+4*m)
 
         return self.A
+    
+    def _create_vector(self, M_dim: int, N_dim: int):
+        """
+        Create the vector for the Galerkin method.
+        Calculating b_mn = (f, \psi_mn)
+        In our case f = -1.
+        """
+        self.b = np.zeros(M_dim*N_dim)
+        for m in range(M_dim):
+            for n in range(1, N_dim + 1):
+                self.b[m*N_dim + n - 1] = - 2/(2*m+1) * beta(2*m+3, n+1)
+
+        return self.b
         
                         
     
@@ -133,5 +146,5 @@ class GalerkinObject():
         plt.show()
 
 GO = GalerkinObject()
-mat = GO._create_matrix(4, 4)
+mat = GO._create_vector(2, 5)
 print(mat)
