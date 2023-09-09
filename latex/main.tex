@@ -178,8 +178,23 @@ Naloga od nas zahteva, da rešimo Poissonovo enačbo (\ref{eq:poisson2}) in izra
 pretok $C$ v primeru polkrožnega preseka cevi. Naj si tudi pogledamo kako je odvisna natančnost
 rešitve od števila členov v indeksih $m$ in $n$.\\
 \section{Opis reševanja}
+Za reševanje sem prižgal svoj trusty IBM PC/XT 5160 (\textit{beri:} v resnici sem uporabil svoj domači računalnik) in 
+preko božjega čudeža uspel uporabiti Python 3.11.0 kljub temu, da je bil ta napisan šele leta 2023. Uporabil sem 
+standardni nabor paketov za znanstveno računanje, torej \texttt{numpy}, \texttt{scipy} in \texttt{matplotlib}.\\
+
+Naloge sem se lotil kot zadnjih dveh nalog, kjer smo tudi reševali parcialne diferencialne enačbe, le na druge 
+načine. Ne vem če je res smiselno ponavljati iste razloge zakaj uberem takšno metodo reševanja. Več naj bi bilo eventually
+dostopno na spletu na \href{https://pengu5055.github.io/}{moji strani}. Napisal sem razred \texttt{GalerkinObject} 
+(da ni stalno Solver) v katerem je vsebovano vse kar potrebujemo za reševanje. Ob kreaciji novega \texttt{GalerkinObjekt}-a 
+uporabnik poda, kolikšno naj bo število členov v indeksih $m$ in $n$. Ostalo pa se ob klicanju metode \texttt{solve()} 
+izračuna samodejno. Imel sem izbiro, da bi lahko uporabil za matrične sisteme kar \texttt{numpy}-jeve funkcije, 
+ampak se mi je zdelo dovolj preprosto, da sem kar sam napisal funkcije za reševanje sistema.
 
 \section{Rezultati}
+Glede na to, kako se mi, zaradi lastnih napak, mudi z oddajo se mi zdi najbolj smiselno, da gremo kar takoj na rezultate.
+
+\subsection{Bazne funkcije}
+Najprej si poglejmo kako izgledajo bazne funkcije. 
 
 
 \section{Komentarji in izboljšave}

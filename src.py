@@ -215,6 +215,77 @@ class GalerkinObject():
         plt.show()
 
 
+    def plot_gallery(self, Z: np.ndarray | None, m: int = None, n: int = None, title: str = None, save: bool = False, filename: str = None):
+        """
+        Here Z is an array of multiple basis functions.
+        """
+        if Z is None:
+            Z = np.empty((self.M_dim, self.N_dim, self.X.shape[0], self.X.shape[1]))
+            for m in range(self.M_dim):
+                for n in range(1, self.N_dim + 1):
+                    Z[m, n - 1] = self.basis_function(self.X, self.PHI, m, n)
+        
+
+
+        fig, axes = plt.subplots(self.M_dim, self.N_dim, subplot_kw=dict(projection='polar'), facecolor="#000000")
+        
+        # Set colormap norm
+
+        norm = plt.Normalize(vmin=np.min(Z), vmax=np.max(Z))
+
+        # Plot the contourf with the colormap
+        for m in range(axes.shape[0]):
+             for n in range(axes.shape[1]):
+                ax = axes[m-1, n-1]
+                ax.set_xticklabels([])
+                ax.set_yticklabels([])
+                ax.set_thetalim(0, np.pi)
+
+                cnt = ax.contourf(self.PHI, self.X, Z[m-1, n-1], cmap=self.cmap, norm=norm)
+                
+
+                # Spines are called ['polar', 'start', 'end', 'inner']
+                # Polar is outside, start is origin radial line, end is the 
+                # end of the radial line and inner is the inner circle.
+                # Got by calling ax.spines.keys() and iterating over them
+                ax.xaxis.label.set_color("#5EE032")
+                ax.yaxis.label.set_color("#5EE032")
+                ax.tick_params(axis="x", colors="#5EE032")
+                ax.tick_params(axis="y", colors="#5EE032")
+                ax.spines['polar'].set_color("#97FC1A")
+                ax.spines['polar'].set_linewidth(3)
+                ax.spines['polar'].set_alpha(0.8)
+                ax.spines['polar'].set_linestyle("--")
+                ax.spines['end'].set_color("#97FC1A")
+                ax.spines['end'].set_linewidth(3)
+                ax.spines['end'].set_alpha(0.8)
+                ax.spines['end'].set_linestyle("--")
+                ax.spines['start'].set_color("#97FC1A")
+                ax.spines['start'].set_linewidth(3)
+                ax.spines['start'].set_alpha(0.8)
+                ax.spines['start'].set_linestyle("--")
+                ax.set_title(f"$m={m}, n={n}$", color="#5EE032", size=12)
+
+        # Spines for cb are called ['left', 'right', 'bottom', 'top', 'outline']
+        # Got by calling cb.ax.spines.keys() and iterating over them
+        cb = plt.colorbar(ax=axes, mappable=cnt)
+        cb.set_label(r"Flow Rate", color="#5EE032", labelpad=10, size=12)
+        cb.ax.xaxis.set_tick_params(color="#5EE032")
+        cb.ax.yaxis.set_tick_params(color="#5EE032")
+        cb.ax.tick_params(axis="x", colors="#5EE032")
+        cb.ax.tick_params(axis="y", colors="#5EE032")
+        cb.ax.spines['outline'].set_color("#97FC1A")
+        cb.ax.spines['outline'].set_linewidth(3)
+        cb.ax.spines['outline'].set_alpha(0.8)
+
+        plt.suptitle(f"Basis Functions", color="#5EE032", size=14)
+        plt.grid(False)
+        plt.subplots_adjust(right=0.70)
+        if save:
+            plt.savefig(filename, dpi=300, bbox_inches="tight")
+        plt.show()
+
+
 def scale_it(N_range, M_range):
     """
     Scale the basis functions to see how they change with the 
@@ -232,6 +303,10 @@ def scale_it(N_range, M_range):
 
     return solutions
 
+GO = GalerkinObject(2, 2)
+GO.plot_gallery(None, title="Basis Functions", save=True, filename="basis_functions.png")
+
+quit()
 # print(scale_it(5, 5))
 GO = GalerkinObject(20, 20)
 val = GO.solve()
