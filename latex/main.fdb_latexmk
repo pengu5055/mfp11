@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1694293884 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN11/latex/main.tex" "main.pdf" "main" 1694293886 0
+["pdflatex"] 1694294591 "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN11/latex/main.tex" "main.pdf" "main" 1694294593 0
   "../images/proc/basis_0-1.jpg" 1694287450 64685 d10a6e2d88539acfdf042a07d4bd6b9c ""
   "../images/proc/basis_0-2.jpg" 1694287461 64290 fcd5662f0b525d8fab5c4f633183494d ""
   "../images/proc/basis_0-3.jpg" 1694287474 64217 f26a572d39d2c42bd264a83041edc083 ""
@@ -135,12 +135,12 @@
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1673965817 123 a302f2c651a95033260db60e51527ae8 ""
-  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN11/latex/main.tex" 1694293882 14330 9a68441c78357eaf474f108e0e9e4f2f ""
+  "e:/FormerSSD/Backup/Documents/FMF/3. Letnik (Dodatno Leto)/Mafijski Praktikum cont/DN11/latex/main.tex" 1694294591 14330 ae4cf0079c0fd572110a3ca20fb6ac9c ""
   "logo.png" 1693580566 8303 8f7f5965ff153bbc45aecaef5ccdb0ac ""
-  "main.aux" 1694293886 4524 591e1dac4831b1a5030ae1a628d6122b "pdflatex"
-  "main.out" 1694293886 821 3cf40febf90b156853931e9a4a427bdc "pdflatex"
-  "main.tex" 1694293882 14330 9a68441c78357eaf474f108e0e9e4f2f ""
-  "main.toc" 1694293886 539 1e299740eaf79144d6b56405f5d84b60 "pdflatex"
+  "main.aux" 1694294593 4524 591e1dac4831b1a5030ae1a628d6122b "pdflatex"
+  "main.out" 1694294593 821 3cf40febf90b156853931e9a4a427bdc "pdflatex"
+  "main.tex" 1694294591 14330 ae4cf0079c0fd572110a3ca20fb6ac9c ""
+  "main.toc" 1694294593 539 1e299740eaf79144d6b56405f5d84b60 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
