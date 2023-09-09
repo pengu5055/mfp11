@@ -177,7 +177,7 @@ class GalerkinObject():
 
         # Spines for cb are called ['left', 'right', 'bottom', 'top', 'outline']
         # Got by calling cb.ax.spines.keys() and iterating over them
-        cb.set_label(r"Flow Rate", color="#5EE032", labelpad=10, size=12)
+        cb.set_label(r"Flow Rate $[\mathrm{arb. units}]$", color="#5EE032", labelpad=10, size=12)
         cb.ax.xaxis.set_tick_params(color="#5EE032")
         cb.ax.yaxis.set_tick_params(color="#5EE032")
         cb.ax.tick_params(axis="x", colors="#5EE032")
@@ -225,23 +225,38 @@ class GalerkinObject():
                 for n in range(1, self.N_dim + 1):
                     Z[m, n - 1] = self.basis_function(self.X, self.PHI, m, n)
         
+        norm = plt.Normalize(vmin=np.min(Z), vmax=np.max(Z))
 
 
         fig, axes = plt.subplots(self.M_dim, self.N_dim, subplot_kw=dict(projection='polar'), facecolor="#000000")
-        
+        cnt = axes[0, 0].contourf(self.PHI, self.X, self.basis_function(self.X, self.PHI, 0, 1), cmap=self.cmap, norm=norm)
+        cnt = axes[0, 1].contourf(self.PHI, self.X, self.basis_function(self.X, self.PHI, 1, 1), cmap=self.cmap, norm=norm)
+        #cnt = axes[0, 2].contourf(self.PHI, self.X, self.basis_function(self.X, self.PHI, 2, 1), cmap=self.cmap, norm=norm)
+        cnt = axes[1, 0].contourf(self.PHI, self.X, self.basis_function(self.X, self.PHI, 0, 2), cmap=self.cmap, norm=norm)
+        cnt = axes[1, 1].contourf(self.PHI, self.X, self.basis_function(self.X, self.PHI, 1, 2), cmap=self.cmap, norm=norm)
+        #cnt = axes[1, 2].contourf(self.PHI, self.X, self.basis_function(self.X, self.PHI, 2, 2), cmap=self.cmap, norm=norm)
+        #cnt = axes[2, 0].contourf(self.PHI, self.X, self.basis_function(self.X, self.PHI, 0, 3), cmap=self.cmap, norm=norm)
+        #cnt = axes[2, 1].contourf(self.PHI, self.X, self.basis_function(self.X, self.PHI, 2, 3), cmap=self.cmap, norm=norm)
+        #cnt = axes[2, 2].contourf(self.PHI, self.X, self.basis_function(self.X, self.PHI, 3, 3), cmap=self.cmap, norm=norm)
+        axes[0, 0].set_title("$m=0$ $n=1$", color="#5EE032", size=14)
+        axes[0, 1].set_title("$m=1$ $n=1$", color="#5EE032", size=14)
+        #axes[0, 2].set_title("$m=2$ $n=1$", color="#5EE032", size=14)
+        axes[1, 0].set_title("$m=0$ $n=2$", color="#5EE032", size=14)
+        axes[1, 1].set_title("$m=1$ $n=2$", color="#5EE032", size=14)
+        #axes[1, 2].set_title("$m=2$ $n=2$", color="#5EE032", size=14)
+        #axes[2, 0].set_title("$m=0$ $n=3$", color="#5EE032", size=14)
+        #axes[2, 1].set_title("$m=1$ $n=3$", color="#5EE032", size=14)
+        #axes[2, 2].set_title("$m=2$ $n=3$", color="#5EE032", size=14)
         # Set colormap norm
 
-        norm = plt.Normalize(vmin=np.min(Z), vmax=np.max(Z))
-
+       
         # Plot the contourf with the colormap
         for m in range(axes.shape[0]):
-             for n in range(axes.shape[1]):
-                ax = axes[m-1, n-1]
+             for n in range(1, axes.shape[1] + 1):
+                ax = axes[m-1, n-2]  # -1 because of indexing -1 because of no n=0
                 ax.set_xticklabels([])
                 ax.set_yticklabels([])
                 ax.set_thetalim(0, np.pi)
-
-                cnt = ax.contourf(self.PHI, self.X, Z[m-1, n-1], cmap=self.cmap, norm=norm)
                 
 
                 # Spines are called ['polar', 'start', 'end', 'inner']
@@ -264,12 +279,12 @@ class GalerkinObject():
                 ax.spines['start'].set_linewidth(3)
                 ax.spines['start'].set_alpha(0.8)
                 ax.spines['start'].set_linestyle("--")
-                ax.set_title(f"$m={m}, n={n}$", color="#5EE032", size=12)
+                ax.grid(False)
 
         # Spines for cb are called ['left', 'right', 'bottom', 'top', 'outline']
         # Got by calling cb.ax.spines.keys() and iterating over them
         cb = plt.colorbar(ax=axes, mappable=cnt)
-        cb.set_label(r"Flow Rate", color="#5EE032", labelpad=10, size=12)
+        cb.set_label(r"Flow Rate $[\mathrm{arb. units}]$", color="#5EE032", labelpad=10, size=12)
         cb.ax.xaxis.set_tick_params(color="#5EE032")
         cb.ax.yaxis.set_tick_params(color="#5EE032")
         cb.ax.tick_params(axis="x", colors="#5EE032")
@@ -304,8 +319,9 @@ def scale_it(N_range, M_range):
     return solutions
 
 GO = GalerkinObject(2, 2)
-GO.plot_gallery(None, title="Basis Functions", save=True, filename="basis_functions.png")
-
+m = 0
+n = 3
+GO.plot_flow(None, m=m, n=n, title=f"Basis Function $m={m}$, $n={n}$" )
 quit()
 # print(scale_it(5, 5))
 GO = GalerkinObject(20, 20)
