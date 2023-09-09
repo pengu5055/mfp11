@@ -5,6 +5,7 @@ I need to solve for the shape coefficient C for Poiseuille flow.
 import numpy as np
 import matplotlib.pyplot as plt
 import cmasher as cmr
+from scipy.special import beta
 
 
 plt.rcParams["font.family"] = "BigBlueTerm437 Nerd Font Mono"
@@ -36,16 +37,47 @@ class GalerkinObject():
         values = x**(2*m+1) * (1-x)**n * np.sin((2*m+1)*phi)
         return values / np.max(values)
     
+    def delta_function(self, m, m_prime):
+        """
+        Delta function for the Galerkin method.
+        """
+        if m == m_prime:
+            return 1
+        else:
+            return 0
+    
     def create_basis(self, x_dim: int, phi_dim: int):
         """
         Create the basis functions for the Galerkin method.
         """
-        self.basis = np.empty((len(self.x), len(self.phi)))
+        basis_vec = []
         for m in range(0, x_dim):
             for n in range(1, phi_dim + 1):
                 Z = self.basis_function(self.X, self.PHI, m, n)
-                
+                basis_vec.append(Z)
         
+        self.basis = np.array(basis_vec)
+
+        return self.basis
+    
+    def _create_matrix(self, M_dim: int, N_dim: int):
+        """
+        Create the matrix for the Galerkin method.
+        Calculating A_mn,m'n' = (\Delta \psi_mn, \psi_m'n')
+
+        """
+        self.A = np.zeros((M_dim*N_dim, M_dim*N_dim))
+        for m in range(M_dim):
+            for n in range(1, N_dim + 1):
+                for m_prime in range(M_dim):
+                    for n_prime in range(1, N_dim + 1):
+                        self.A[m * N_dim + n - 1, m_prime * N_dim + n_prime - 1] = -(np.pi/2) * self.delta_function(m, m_prime) * \
+                                                                                    (n*n_prime*(3+4*m))/(2+4*m+n+n_prime) * \
+                                                                                    beta(n+n_prime-1, 3+4*m)
+
+        return self.A
+        
+                        
     
     def plot_flow(self, Z: np.ndarray | None):
         fig, ax = plt.subplots(subplot_kw=dict(projection='polar'), facecolor="#000000")
@@ -97,8 +129,9 @@ class GalerkinObject():
 
         plt.title(f"Basis function $m={m}$, $n={n}$", color="#5EE032")
         plt.grid(False)
+        plt.savefig('filename.png', dpi=1200, bbox_inches="tight")
         plt.show()
 
 GO = GalerkinObject()
-GO.create_basis(2, 2)
-#GO.plot_flow(None)
+mat = GO._create_matrix(4, 4)
+print(mat)
