@@ -18,8 +18,14 @@ plt.rcParams['mathtext.sf'] = 'BigBlueTerm437 Nerd Font Mono'
 # ['#000000', '#11140B', '#23301C', '#2F4A2A', '#356636', '#368440', '#30A245', '#32C141', '#5EE032', '#97FC1A']
 
 class GalerkinObject():
-    def __init__(self) -> None:
-        pass
+    def __init__(self):
+        self.phi = np.linspace(0, np.pi, 1000)
+        self.x = np.linspace(0, 1, 1000)
+        self.X, self.PHI = np.meshgrid(self.x, self.phi)
+        self.m = 0
+        self.n = 1
+        # Sub colormap for better contrast on our quasi-green screen
+        self.cmap = cmr.get_sub_cmap('cmr.nuclear', 0.2, 0.8)
     
     def basis_function(self, x, phi, m, n):
         """
@@ -30,23 +36,32 @@ class GalerkinObject():
         values = x**(2*m+1) * (1-x)**n * np.sin((2*m+1)*phi)
         return values / np.max(values)
     
-    def plot_flow(self):
+    def create_basis(self, x_dim: int, phi_dim: int):
+        """
+        Create the basis functions for the Galerkin method.
+        """
+        self.basis = np.empty((len(self.x), len(self.phi)))
+        for m in range(0, x_dim):
+            for n in range(1, phi_dim + 1):
+                Z = self.basis_function(self.X, self.PHI, m, n)
+                
+        
+    
+    def plot_flow(self, Z: np.ndarray | None):
         fig, ax = plt.subplots(subplot_kw=dict(projection='polar'), facecolor="#000000")
         ax.set_xticklabels([])
         ax.set_yticklabels([])
         ax.set_thetalim(0, np.pi)
-        phi = np.linspace(0, np.pi, 1000)
-        m = 0
-        n = 1
-        x = np.linspace(0, 1, 1000)
-        X, PHI = np.meshgrid(x, phi)
-        Z = self.basis_function(X, PHI, m, n)
-        cmap = cmr.get_sub_cmap('cmr.nuclear', 0.2, 0.8)
 
-        cnt = ax.contourf(PHI, X, Z, cmap=cmap)
+        m = self.m
+        n = self.n
+
+        if Z is None:
+            Z = self.basis_function(self.X, self.PHI, self.m, self.n)
+
+        # Plot the contourf with the colormap
+        cnt = ax.contourf(self.PHI, self.X, Z, cmap=self.cmap)
         cb = fig.colorbar(ax=ax, mappable=cnt)
-
-        
 
         # Spines for cb are called ['left', 'right', 'bottom', 'top', 'outline']
         # Got by calling cb.ax.spines.keys() and iterating over them
@@ -85,4 +100,5 @@ class GalerkinObject():
         plt.show()
 
 GO = GalerkinObject()
-GO.plot_flow()
+GO.create_basis(2, 2)
+#GO.plot_flow(None)
