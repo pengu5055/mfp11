@@ -1,0 +1,126 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[slovene]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[nottoc]{tocbibind}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{ dsfont }
+\usepackage{siunitx}
+\usepackage{multimedia}
+\usepackage[table,xcdraw]{xcolor}
+\setlength\parindent{0pt}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\newcommand{\ddd}{\mathrm{d}}
+\newcommand\myworries[1]{\textcolor{red}{#1}}
+\newcommand{\Dd}[3][{}]{\frac{\ddd^{#1} #2}{\ddd #3^{#1}}}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \includegraphics[]{logo.png}
+        \vspace*{3cm}
+        
+        \Huge
+        \textbf{Reševanje PDE z metodo Galerkina}
+        
+        \vspace{0.5cm}
+        \large
+        11. naloga pri Matematično-fizikalnem praktikumu
+
+        \vspace{4.5cm}
+        
+        \textbf{Avtor:} Marko Urbanč (28191096)\ \\
+        \textbf{Predavatelj:} prof. dr. Borut Paul Kerševan\ \\
+        
+        \vspace{2.8cm}
+        
+        \large
+        8.9.2023
+    \end{center}
+\end{titlepage}
+\tableofcontents
+\newpage
+\section{Uvod}
+Če poznamo lastne funkcije diferencialnega operatorja za določeno geometrijo, se reševanje parcialnih
+diferencialnih enačb včasih lahko prevede na razvoj po lastnih funkcijah. V tem primeru se lahko
+diferencialni operator zapiše kot matrika in enačbo potem rešujemo kot sistem linearnih enačb. Tega lahko
+računamo kot vemo in znamo. Zdaj smo to počeli že parkrat.\\
+
+V našem primeru bo fizikalna inspiracija Navier-Stokesova enačba, ki je pravzaprav drugi Newtonov zakon za 
+tekočine. Vendar pa je ta enačba zelo zapletena in je še vedno odprt problem, ali sploh obstajajo rešitve
+v splošnem. Zato se bomo omejili na preprostejši primer, kjer privzamemo, da imamo enakomeren laminaren tok 
+nestisljive tekočine v dolgi ravni cevi pod vplivom stalnega tlačnega gradienta $p'$. V tem primeru se 
+Navier-Stokesova enačba poenostavi na Poissonovo enačbo
+
+\begin{equation}
+    \nabla^2 \vec{v} = -\frac{p'}{\eta}\>,
+    \label{eq:poisson}
+\end{equation}
+
+kjer je $\vec{v}$ hitrost tekočine in $\eta$ njena viskoznost. Enačbo rešujemo v notranjosti preseka cevi, medtem ko
+je ob stenah hitrost enaka nič. Za pretok velja Poiseuillov zakon
+
+\begin{equation}
+    \Phi = \int_S{v\>\ddd S}  = C \frac{p' S^2}{8\pi\eta}\>,
+    \label{eq:poiseuille}
+\end{equation}
+
+kjer je $S$ presek cevi in $C$ konstanta, ki je odvisna od oblike preseka. Konstanta znaša $C = 1$ za krožni presek.
+V našem primeru pa bomo določili konstanto $C$ pa polkrožni presek. Uvedemo nove spremenljivke $\xi = r/R$ in 
+$u=v\eta/(p'R^2)$ in nato se problem glasi
+
+\begin{equation}
+    \Delta u(\xi,\>\phi) = -1, \qquad u(1,\>\phi) = u(\xi,\>0) = u(\xi,\>\pi) = 0\>,
+    \label{eq:poisson2}
+\end{equation}
+\begin{equation}
+    C = 8\pi \iint{\frac{u(\xi,\>\phi)\xi\>\ddd\xi\> \ddd\phi}{(\pi/2)^2}}\>.
+\end{equation}
+
+Da se izognemo 
+
+
+\section{Naloga}
+
+\section{Opis reševanja}
+
+\section{Rezultati}
+
+
+\section{Komentarji in izboljšave}
+
+
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{sources}
+\end{document}
