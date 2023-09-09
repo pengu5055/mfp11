@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.9)  9 SEP 2023 22:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.8.9)  9 SEP 2023 23:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -535,7 +535,7 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 Package translations Info: no dictionary file `translations-basic-dictionary-slovenian.trsl' found. on input line 47.
-<logo.png, id=36, 220.67175pt x 141.22992pt>
+<logo.png, id=32, 220.67175pt x 141.22992pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 50.
@@ -567,32 +567,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--184
  []
 
 [3]
-<../images/proc/basis_0-1.jpg, id=93, 642.4pt x 481.8pt>
+<../images/proc/basis_0-1.jpg, id=88, 642.4pt x 481.8pt>
 File: ../images/proc/basis_0-1.jpg Graphic file (type jpg)
 <use ../images/proc/basis_0-1.jpg>
 Package pdftex.def Info: ../images/proc/basis_0-1.jpg  used on input line 220.
 (pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
-<../images/proc/basis_0-2.jpg, id=94, 642.4pt x 481.8pt>
+<../images/proc/basis_0-2.jpg, id=89, 642.4pt x 481.8pt>
 File: ../images/proc/basis_0-2.jpg Graphic file (type jpg)
 <use ../images/proc/basis_0-2.jpg>
 Package pdftex.def Info: ../images/proc/basis_0-2.jpg  used on input line 220.
 (pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
-<../images/proc/basis_1-1.jpg, id=95, 642.4pt x 481.8pt>
+<../images/proc/basis_1-1.jpg, id=90, 642.4pt x 481.8pt>
 File: ../images/proc/basis_1-1.jpg Graphic file (type jpg)
 <use ../images/proc/basis_1-1.jpg>
 Package pdftex.def Info: ../images/proc/basis_1-1.jpg  used on input line 240.
 (pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
-<../images/proc/basis_1-2.jpg, id=96, 642.4pt x 481.8pt>
+<../images/proc/basis_1-2.jpg, id=91, 642.4pt x 481.8pt>
 File: ../images/proc/basis_1-2.jpg Graphic file (type jpg)
 <use ../images/proc/basis_1-2.jpg>
 Package pdftex.def Info: ../images/proc/basis_1-2.jpg  used on input line 240.
 (pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
-<../images/proc/basis_0-3.jpg, id=97, 642.4pt x 481.8pt>
+<../images/proc/basis_0-3.jpg, id=92, 642.4pt x 481.8pt>
 File: ../images/proc/basis_0-3.jpg Graphic file (type jpg)
 <use ../images/proc/basis_0-3.jpg>
 Package pdftex.def Info: ../images/proc/basis_0-3.jpg  used on input line 260.
 (pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
-<../images/proc/basis_7-10.jpg, id=98, 642.4pt x 481.8pt>
+<../images/proc/basis_7-10.jpg, id=93, 642.4pt x 481.8pt>
 File: ../images/proc/basis_7-10.jpg Graphic file (type jpg)
 <use ../images/proc/basis_7-10.jpg>
 Package pdftex.def Info: ../images/proc/basis_7-10.jpg  used on input line 260.
@@ -606,50 +606,73 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 265.
 
-<../images/proc/m_scaling.jpg, id=111, 642.4pt x 481.8pt>
+<../images/proc/m_scaling.jpg, id=106, 642.4pt x 481.8pt>
 File: ../images/proc/m_scaling.jpg Graphic file (type jpg)
 <use ../images/proc/m_scaling.jpg>
 Package pdftex.def Info: ../images/proc/m_scaling.jpg  used on input line 280.
 (pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
-<../images/proc/m_scaling_time.jpg, id=112, 642.4pt x 481.8pt>
+<../images/proc/m_scaling_time.jpg, id=107, 642.4pt x 481.8pt>
 File: ../images/proc/m_scaling_time.jpg Graphic file (type jpg)
 <use ../images/proc/m_scaling_time.jpg>
 Package pdftex.def Info: ../images/proc/m_scaling_time.jpg  used on input line 280.
 (pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
-<../images/proc/n_scaling.jpg, id=113, 642.4pt x 481.8pt>
+<../images/proc/n_scaling.jpg, id=108, 642.4pt x 481.8pt>
 File: ../images/proc/n_scaling.jpg Graphic file (type jpg)
 <use ../images/proc/n_scaling.jpg>
 Package pdftex.def Info: ../images/proc/n_scaling.jpg  used on input line 300.
 (pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
-<../images/proc/n_scaling_time.jpg, id=114, 642.4pt x 481.8pt>
+<../images/proc/n_scaling_time.jpg, id=109, 642.4pt x 481.8pt>
 File: ../images/proc/n_scaling_time.jpg Graphic file (type jpg)
 <use ../images/proc/n_scaling_time.jpg>
 Package pdftex.def Info: ../images/proc/n_scaling_time.jpg  used on input line 300.
 (pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
-[6 <../images/proc/m_scaling.jpg> <../images/proc/m_scaling_time.jpg>] [7 <../images/proc/n_scaling.jpg> <../images/proc/n_scaling_time.jpg>] (main.bbl
+[6 <../images/proc/m_scaling.jpg> <../images/proc/m_scaling_time.jpg>]
+<../images/proc/ff_1-1.jpg, id=117, 642.4pt x 481.8pt>
+File: ../images/proc/ff_1-1.jpg Graphic file (type jpg)
+<use ../images/proc/ff_1-1.jpg>
+Package pdftex.def Info: ../images/proc/ff_1-1.jpg  used on input line 321.
+(pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
+<../images/proc/ff_2-2.jpg, id=118, 642.4pt x 481.8pt>
+File: ../images/proc/ff_2-2.jpg Graphic file (type jpg)
+<use ../images/proc/ff_2-2.jpg>
+Package pdftex.def Info: ../images/proc/ff_2-2.jpg  used on input line 321.
+(pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
+ [7 <../images/proc/n_scaling.jpg> <../images/proc/n_scaling_time.jpg>]
+<../images/proc/ff_3-3.jpg, id=124, 642.4pt x 481.8pt>
+File: ../images/proc/ff_3-3.jpg Graphic file (type jpg)
+<use ../images/proc/ff_3-3.jpg>
+Package pdftex.def Info: ../images/proc/ff_3-3.jpg  used on input line 337.
+(pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
+<../images/proc/ff_10-10.jpg, id=125, 642.4pt x 481.8pt>
+File: ../images/proc/ff_10-10.jpg Graphic file (type jpg)
+<use ../images/proc/ff_10-10.jpg>
+Package pdftex.def Info: ../images/proc/ff_10-10.jpg  used on input line 337.
+(pdftex.def)             Requested size: 310.4979pt x 232.87872pt.
+ [8 <../images/proc/ff_1-1.jpg> <../images/proc/ff_2-2.jpg> <../images/proc/ff_3-3.jpg> <../images/proc/ff_10-10.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 351--355
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
+ []
 
-) [8] (main.aux)
+[9] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 85B0668F55C3B88D6FD9EFA380BBA299;915.
+(rerunfilecheck)             Checksum: 3CF40FEBF90B156853931E9A4A427BDC;821.
  ) 
 Here is how much of TeX's memory you used:
- 20235 strings out of 475550
- 392670 string characters out of 5759194
+ 20255 strings out of 475550
+ 393296 string characters out of 5759194
  1929238 words of memory out of 5000000
- 41183 multiletter control sequences out of 15000+600000
+ 41203 multiletter control sequences out of 15000+600000
  564273 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,10n,79p,367b,954s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Marko Urbanc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (9 pages, 949043 bytes).
+Output written on main.pdf (10 pages, 1230660 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 124 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 207 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

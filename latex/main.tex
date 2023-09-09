@@ -301,13 +301,55 @@ z večanjem $m$. Sklepam, da je to najbrž prava vrednost $C$.
     \caption{Skaliranje koeficienta $C$ in časa računanja z $n$.}
 \end{figure}
 
-Zanimivo je, da $n$ precej drastično vpliva 
+Zanimivo je, da $n$ precej drastično vpliva na vrednost $C$. Določi kot stopnica, kje bo vrednost $C$ asimptotsko konvergirala, ampak 
+po nekaj členih ne kaže, da bi se vrednost kaj veliko spreminjala, kar pomeni, da pridemo hitro do rezultata. To vse je precej smiselno, 
+še sploh bo zdaj, ko si pogledamo tokovna polja, ki so zelo podobi (a ne enaki) kot bazne funkcije za $m=0$ in različne $n$. Verjetno 
+te prispevajo glavnino k pretoku. Poglejmo še tokovna polja
 
+\begin{figure}[H]
+    \centering
+    \makebox[\textwidth][c]{%
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/ff_1-1.jpg}
+    \end{minipage}%
+    %\hspace{0.001\textwidth}% 
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/ff_2-2.jpg}
+    \end{minipage}%
+    }
+    \caption{Tokova polja za $1\times1$ in $2\times2$ bazo.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \makebox[\textwidth][c]{%
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/ff_3-3.jpg}
+    \end{minipage}%
+    %\hspace{0.001\textwidth}% 
+    \begin{minipage}{0.90\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{../images/proc/ff_10-10.jpg}
+    \end{minipage}%
+    }
+    \caption{Tokova polja za $3\times3$ in $10\times10$ bazo.}
+\end{figure}
+
+Kot pričakovano se z večanjem baze rezultat izbolšuje. Pri $10\times10$ bazi imamo že res lepo prikazano tokovno polje. Za praktične 
+namene pa je zdaj pravzaprav odvisno od uporabnika in njegove željene natančnosti. Za natančnost na $2$ decimalni mesti je dovolj
+že $3\times3$ baza. Za kaj več bi bilo pa treba ugotavljati naprej. Največja vrednost baze za katero sem jaz računal je bila $10\times10$,
+to je seveda ker sem na IBM PC/XT 5160 računal in definitivno ne zaradi tega, ker bi se mi mudilo z oddajo. Dobil sem končno vrednost nekje
+
+\begin{equation}
+    C = 0.7576\>.
+\end{equation}
 
 \section{Komentarji in izboljšave}
-
-
-\newpage
-\bibliographystyle{unsrt}
-\bibliography{sources}
+Naloga je bila precej zabavna kljub vsemu hitenju zaradi roka oddaje. Med računanjem sem se spomnil navdiha za theme plot-ov in upam,
+da je vam bralcu všeč. Sem poskusil uravnotežiti med tem, da zgleda avtentično, lepo in berljivo in da ne porabim ogromno časa, ker ga nimam.
+Definitivno bi poskusil več primerjav narediti, še sploh za večje baze. Mogoče bi bilo smiselno pogledati kakšne residume, kaj pa vem. No ja,
+upam, da je bilo branje dokaj prijetno in da so bile slike a trip down memory lane in ne kot annoyance.\\
 \end{document}
