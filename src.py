@@ -19,12 +19,17 @@ plt.rcParams['mathtext.sf'] = 'BigBlueTerm437 Nerd Font Mono'
 # ['#000000', '#11140B', '#23301C', '#2F4A2A', '#356636', '#368440', '#30A245', '#32C141', '#5EE032', '#97FC1A']
 
 class GalerkinObject():
-    def __init__(self):
+    def __init__(self,
+                 M_dim: int,
+                 N_dim: int,
+                 ):
         self.phi = np.linspace(0, np.pi, 1000)
         self.x = np.linspace(0, 1, 1000)
         self.X, self.PHI = np.meshgrid(self.x, self.phi)
         self.m = 0
         self.n = 1
+        self.M_dim = M_dim
+        self.N_dim = N_dim
         # Sub colormap for better contrast on our quasi-green screen
         self.cmap = cmr.get_sub_cmap('cmr.nuclear', 0.2, 0.8)
     
@@ -90,7 +95,27 @@ class GalerkinObject():
 
         return self.b
         
-                        
+    def solve(self):
+        """
+        Solve the Galerkin method.
+        """
+        self.create_basis(self.M_dim, self.N_dim)
+        self._create_matrix(self.M_dim, self.N_dim)
+        self._create_vector(self.M_dim, self.N_dim)
+        self.C = 0
+        A_inv = np.linalg.inv(self.A)
+        for m in range(self.M_dim):
+            for n in range(1, self.N_dim + 1):
+                for m_prime in range(self.M_dim):
+                    for n_prime in range(1, self.N_dim + 1):
+                        #  b_mn * A_mn,m'n' * b_m'n' or b_i * A_i,j * b_j
+                        self.C += self.b[m*self.N_dim + n - 1] * \
+                                  A_inv[m * self.N_dim + n - 1, m_prime * self.N_dim + n_prime - 1] * \
+                                  self.b[m_prime*self.N_dim + n_prime - 1]
+
+        self.C *= -32/np.pi 
+
+        return self.C             
     
     def plot_flow(self, Z: np.ndarray | None):
         fig, ax = plt.subplots(subplot_kw=dict(projection='polar'), facecolor="#000000")
@@ -145,6 +170,7 @@ class GalerkinObject():
         plt.savefig('filename.png', dpi=1200, bbox_inches="tight")
         plt.show()
 
-GO = GalerkinObject()
-mat = GO._create_vector(2, 5)
+GO = GalerkinObject(2, 2)
+
+mat = GO.solve()
 print(mat)
