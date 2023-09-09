@@ -107,8 +107,64 @@ $u=v\eta/(p'R^2)$ in nato se problem glasi
     C = 8\pi \iint{\frac{u(\xi,\>\phi)\xi\>\ddd\xi\> \ddd\phi}{(\pi/2)^2}}\>.
 \end{equation}
 
-Da se izognemo 
+Da se izognemo računanju lastnih funkcij (v temu primeru Besselovih) in njihovih ničel, lahko zapišemo
+rešitev v obliki razvoja po neki poskuni bazi. V našem primeru bomo vzeli bazo
 
+\begin{equation}
+    \psi_{nm}(\xi,\>\phi) = \xi^{2m+1}(1-\xi)^n \sin((2m+1)\phi)\>.
+\end{equation}
+
+Z njo lahko zapišemo aproksimacijo rešitve kot linearno kombinacijo 
+
+\begin{equation}
+    \tilde{u}(\xi,\>\phi) = \sum_{n=0}^{\infty}\sum_{m=0}^{\infty}{a_{nm}\psi_{nm}(\xi,\>\phi)}\>.
+\end{equation}
+
+Za te funkcije niti ni nujno da so prava baza v smislu, da bi bile ortogonalne druga na drugo. Potrebno je
+da zadoščajo robnim pogojem tako, da jim bo avtomatično zadoščala tudi linearna kombinacija. Približna funkcija 
+$\tilde{u}$ seveda ne zadosti Poissonovi enačbi za res, ampak ji preostane majhna napaka $\varepsilon$
+
+\begin{equation}
+    \Delta \tilde{u}(\xi,\>\phi) = -1 + \varepsilon(\xi,\>\phi)\>.
+\end{equation}
+
+Pri metodi Galerkina zahtevamo, da je napaka ortogonalna na vse poskusne funkcije $\psi_{nm}$, torej
+
+\begin{equation}
+    \langle \psi_{nm},\>\varepsilon \rangle = 0 \qquad \forall n,m\>.
+\end{equation}
+
+V splošnem bi lahko zahtevali še ortogonalnost napake na nek drug sistem utežnih funkcij. Metoda Galerkina je
+poseben primer takih metod (angl. \textit{Methods of Weighted Residuals}), kjer je utežna funkcija kar poskusna
+funkcija sama. Omenjena izbira vodi do sistema enačb za koeficiente $a_{nm}$
+
+\begin{equation}
+    {A_{nm,n'm'} a_{n'm'}} = b_{nm}\>.
+\end{equation}
+
+Koeficiente $b_{nm}$ dobimo iz skalarnega produkta
+
+\begin{equation}
+    b_{nm} = \langle -1,\>\psi_{nm} \rangle\>,
+\end{equation}
+
+ki se zaradi ortogonalnosti poskusnih funkcij poenostavi v
+
+\begin{equation}
+    b_{nm} = - \frac{2}{2m + 1} \mathrm{B}(2m+3, n+1)\>,
+\end{equation}
+
+kjer je $\mathrm{B}$ Eulerjeva beta funkcija. Matrika $A$ pa je definirana kot 
+
+\begin{equation}
+    A_{nm,n'm'} = \langle \nabla^2\psi_{nm},\>\psi_{n'm'} \rangle\>,
+\end{equation}
+
+kar se po upoštevanju ortogonalnosti poskusnih funkcij poenostavi v
+
+\begin{equation}
+    A_{nm,n'm'} = -\frac{\pi}{2} \frac{nn'(3+4m)}{2+4m+n+n'} \mathrm{B}(n+n'-1, 3+4m)\>\delta_{mm'}\>.
+\end{equation}
 
 \section{Naloga}
 
