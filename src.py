@@ -318,14 +318,8 @@ def scale_it(N_range, M_range):
 
     return solutions
 
-GO = GalerkinObject(2, 2)
-m = 0
-n = 3
-GO.plot_flow(None, m=m, n=n, title=f"Basis Function $m={m}$, $n={n}$" )
-quit()
-# print(scale_it(5, 5))
-GO = GalerkinObject(20, 20)
+GO = GalerkinObject(10, 10)
 val = GO.solve()
 Z = GO.solve_flow()
-GO.plot_flow(Z, title=f"Flow Field $C = {round(val, 3)}$ M={GO.M_dim}, N={GO.N_dim}")
+GO.plot_flow(Z, title=f"Flow Field $C = {round(val, 5)}$ M={GO.M_dim}, N={GO.N_dim}")
 
