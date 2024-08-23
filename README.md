@@ -1,6 +1,3 @@
----
-title: MFP DN11
----
 # DN 11. Reševanje PDE z metodo Galerkina (Reševanje Poissonove enačbe)
 
 Še zadnji okus metode za reševanja parcialnih diferencialnih enačb. Tokrat se bomo lotili reševanja Poissonove enačbe z metodo Galerkina. Pri metodi Galerkina se rešitve aproksimira z neko kombinacijo baznih funkcij, ki jih določimo z znanjem o fiziki problema in robnih pogojih.
